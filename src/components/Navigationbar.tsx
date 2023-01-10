@@ -1,5 +1,6 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { BsFillCartFill } from "react-icons/bs";
 
 const Navigationbar = () => {
 	return (
@@ -16,7 +17,13 @@ const Navigationbar = () => {
 						About
 					</Nav.Link>
 				</Nav>
-				<Button></Button>
+				<Button
+					style={{ width: "3rem", height: "3rem", position: "relative" }}
+					variant="outline-primary"
+					className="rounded-circle"
+				>
+					<BsFillCartFill />
+				</Button>
 			</Container>
 		</Navbar>
 	);
