@@ -4,7 +4,7 @@ import { BsFillCartFill } from "react-icons/bs";
 
 const Navigationbar = () => {
 	return (
-		<Navbar className="bg-white shadow-sm mb-3">
+		<Navbar sticky={"top"} className="bg-white shadow-sm mb-3">
 			<Container>
 				<Nav>
 					<Nav.Link to="/" as={NavLink}>
@@ -23,6 +23,20 @@ const Navigationbar = () => {
 					className="rounded-circle"
 				>
 					<BsFillCartFill />
+					<div
+						className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+						style={{
+							color: "white",
+							width: "1.5rem",
+							height: "1.5rem",
+							position: "absolute",
+							bottom: 0,
+							right: 0,
+							transform: "translate(25%, 25%)",
+						}}
+					>
+						3
+					</div>
 				</Button>
 			</Container>
 		</Navbar>
