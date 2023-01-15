@@ -2,10 +2,11 @@ import { Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { Home, Store, About } from "./pages";
 import Navigationbar from "./components/Navigationbar";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
 function App() {
 	return (
-		<>
+		<ShoppingCartProvider>
 			<Navigationbar />
 			<Container className="mb-4">
 				<Routes>
@@ -14,7 +15,7 @@ function App() {
 					<Route path="/about" element={<About />} />
 				</Routes>
 			</Container>
-		</>
+		</ShoppingCartProvider>
 	);
 }
 
